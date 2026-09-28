@@ -1,0 +1,108 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist/public",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "rewrites": [
+    {
+      "source": "/r/:code",
+      "destination": "/api/r/:code"
+    },
+    {
+      "source": "/p/:slug",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/signup",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/comptes",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contenus",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/calendrier",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/publications",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/interactions",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/assistants",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/analytics",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/equipe",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/abonnement",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/automatisations",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/notifications",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/parametres",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/link-pages",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/legal/privacy",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/legal/terms",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/data-deletion",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/404",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/index.html"
+    }
+  ],
+  "functions": {
+    "api/[...path].ts": {
+      "includeFiles": "dist/public/**"
+    }
+  }
+}
